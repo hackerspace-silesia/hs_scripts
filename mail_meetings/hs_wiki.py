@@ -28,6 +28,8 @@ W najbliższym tygodniu w naszym HSie odbędą się następujące spotkania:
 
 Poza tym zapraszamy wszystkich na "dzień otwarty" w każdy czwartek od godz. 18:00.
 
+Lista wszystkich spotkań planowanych i odbytyh znajduje się na wiki: https://wiki.hs-silesia.pl/wiki/Planowane_spotkania
+
 Pozdrawiam
 HSowy bot
 '''
