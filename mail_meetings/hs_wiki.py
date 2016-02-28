@@ -35,6 +35,7 @@ Pozdrawiam
 HSowy bot
 '''
 
+EVENTS_LIST_FORMAT = "* {}"
 
 def get_html(url):
     raw_data = requests.get(url, verify=False)
@@ -79,7 +80,7 @@ def send_mail():
     events = show_events(datetime.date.today(), next_weekday(6)) # 6 - sunday
     if not events:
         return
-    events = ('- {}'.format(event) for event in events)
+    events = (EVENTS_LIST_FORMAT.format(event) for event in events)
     events = '\n'.join(events)
 
     user = os.environ['BOT_MAIL_USER']
