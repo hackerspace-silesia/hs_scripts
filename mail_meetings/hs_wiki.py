@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# Credits: Some code is based on: https://github.com/firemark/grazyna/blob/master/grazyna/plugins/hs_wiki.py
 import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
