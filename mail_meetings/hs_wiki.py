@@ -80,7 +80,7 @@ def send_mail():
     events = show_events(datetime.date.today(), next_weekday(6)) # 6 - sunday
     if not events:
         return
-    events = (EVENTS_LIST.format(event) for event in events)
+    events = (EVENTS_LIST_FORMAT.format(event) for event in events)
     events = '\n'.join(events)
 
     user = os.environ['BOT_MAIL_USER']
