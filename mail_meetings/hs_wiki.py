@@ -36,7 +36,7 @@ HSowy bot
 
 
 def get_html(url):
-    raw_data = requests.get(url)
+    raw_data = requests.get(url, verify=False)
     return fromstring_to_html(raw_data.text)
 
 
