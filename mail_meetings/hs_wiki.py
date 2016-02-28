@@ -53,9 +53,10 @@ def show_events(from_date, to_date):
     label = MEETS_ID
     html = get_html(URL_MEETS)
     nodes = html.xpath(LIST_XPATH, id=label)
+    nodes = (node.text_content().strip() for node in nodes)
 
-    parsed_nodes = ((node.text.strip(), parse_date(node.text))
-             for node in nodes if node.text)
+    parsed_nodes = ((node, parse_date(node))
+             for node in nodes if node)
     list_data = sorted(
         (
             (text, date) for text, date in parsed_nodes
