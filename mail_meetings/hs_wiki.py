@@ -29,12 +29,13 @@ W najbliższym tygodniu w naszym HSie odbędą się następujące spotkania:
 
 Poza tym zapraszamy wszystkich na "dzień otwarty" w każdy czwartek od godz. 18:00.
 
-Lista wszystkich spotkań planowanych i odbytyh znajduje się na wiki: https://wiki.hs-silesia.pl/wiki/Planowane_spotkania
+Lista wszystkich spotkań planowanych i odbytych znajduje się na wiki: https://wiki.hs-silesia.pl/wiki/Planowane_spotkania
 
 Pozdrawiam
 HSowy bot
 '''
 
+EVENTS_LIST_FORMAT = "* {}"
 
 def get_html(url):
     raw_data = requests.get(url, verify=False)
@@ -79,7 +80,7 @@ def send_mail():
     events = show_events(datetime.date.today(), next_weekday(6)) # 6 - sunday
     if not events:
         return
-    events = ('- {}'.format(event) for event in events)
+    events = (EVENTS_LIST.format(event) for event in events)
     events = '\n'.join(events)
 
     user = os.environ['BOT_MAIL_USER']
